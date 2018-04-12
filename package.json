@@ -2,7 +2,7 @@
   "author": "Andrew Sliwinski <andrew@diy.org> modified by Felipe Paiva (multi language)",
   "name": "sentiment-multi-language",
   "description": "AFINN-based sentiment analysis for Node.js PS: modified by Felipe Paiva",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "https://github.com/FelipePaiva1992/sentiment-multi-language",
   "repository": {
     "type": "git",

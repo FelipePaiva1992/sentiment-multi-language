@@ -4,8 +4,9 @@
 ### Forked from (https://github.com/thisandagain/sentiment) and modified by Felipe Paiva
 
 #### Suported Languages
-- Brazilian Portuguese (ptBR)
-- English (usEN)
+- Brazilian Portuguese (pt-BR)
+- English (en-US)
+- Emoticons (All Languages)
 
 
 Sentiment is a Node.js module that uses the [AFINN-111](http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010) wordlist to perform [sentiment analysis](http://en.wikipedia.org/wiki/Sentiment_analysis) on arbitrary blocks of input text. Sentiment provides serveral things:
@@ -26,7 +27,7 @@ var sentiment = require('sentiment-multi-language');
 var r1 = sentiment('Gatos são estúpidos!');
 console.dir(r1);      // Score: -2, Comparative: -0.666
 
-var r1 = sentiment('Cats are stupid!', 'usEN');
+var r1 = sentiment('Cats are stupid!', 'en-US');
 console.dir(r1);       // Score: -2, Comparative: -0.666
 ```
 
@@ -35,9 +36,9 @@ You can append and/or overwrite values from AFINN by simply injecting key/value 
 ```javascript
 var sentiment = require('sentiment-multi-language');
 
-var result = sentiment('Gatos são incríveis!', {
-    'gatos': 5,
-    'incríveis': 2  
+var result = sentiment('Cats are stupid!', 'en-US', {
+    'cats': 5,
+    'stupid': -7  
 });
-console.dir(result);    // Score: 7, Comparative: 1.75
+console.dir(result);    // Score: -2, Comparative: -0.666
 ```
